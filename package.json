@@ -1,0 +1,22 @@
+{
+  "name": "el-pajas-locas",
+  "version": "1.0.0",
+  "description": "juego para movil 100% real no fake ahora si es la que va 4ever XD :V",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristian287/diptongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristian287/diptongo/issues"
+  },
+  "homepage": "https://github.com/cristian287/diptongo#readme",
+  "dependencies": {
+    "phaser": "^3.55.2"
+  }
+}
