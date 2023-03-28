@@ -25,10 +25,53 @@ function preload (){ //Recursos a precargar
     this.load.image("fondo","img/gemido.354.jpg no")
     this.load.image("cuadroInfo","img/cuadro-info.png")
     
+    this.load.spritesheet('huellas',
+      'img/piesS.png',
+      { frameWidth: 400, frameHeight: 350 }
+)
 
 
 }
+function create (){ //Recursos a crear
 
+    
+    this.anims.create({
+        key: "playGif",
+        frames: this.anims.generateFrameNumbers('patas', { start: 0, end: -1 }),
+        frameRate: 2,
+        repeat: -1
+    })
+    image1 = this.add.sprite(310, 250, "patas").play("playGif");
+    image1.setInteractive({})
+
+
+    this.image2 = this.add.image(650,300,"cuadro")
+    this.image2.setInteractive()
+
+    textInfoFirstItem = this.add.text(580,260,("cuesta " + firstItem.price))
+    this.input.on("gameobjectdown",clicked,this)
+    this.add.sprite(0, 0, 'fondo').setOrigin(0, 0).setScale(1);
+    
+
+    this.image2 = this.add.image(630,110,"cuadroInfo")
+    this.image2.setInteractive()
+
+    
+    this.anims.create({
+        key: 'huellasGif',
+        frames: this.anims.generateFrameNumbers('huellas', { start: 0, end:4  }),
+        frameRate: 2,
+        repeat: -1,
+        
+  });
+    this.miSprite = this.add.sprite(500, 200, 'huellas');
+    this.miSprite.anims.play('huellasGif');
+    
+    
+
+    text = this.add.text(530,46,"",{ fill: '#ffffff' })
+    textTwo = this.add.text(490,66,"",{fill: '#ffffff'})
+} 
 
 
 function update(){
